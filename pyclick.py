@@ -45,7 +45,7 @@ while True:
             else:
                 print("[-] Wrong key!")
                 sleep(1)
-                keyboard.send('backspace')
+                #keyboard.send('backspace')
     if (menu == "2"):
         system("cls")
         speed = setspeed(speed)
