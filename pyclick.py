@@ -6,14 +6,17 @@ import keyboard
 
 
 def clicker(x):
+    clicks = 0
     print("[+] Clicking in 3 seconds")
     sleep(3)
-    print("[!] Press Insert to stop")
     while True:
+           print("Clicker: ON\n\nClicks: ", clicks, "\n\n[!] Press Insert to stop")
            sleep(x)
            mouse.click(button='left')
+           clicks = clicks + 1
            if (keyboard.is_pressed('insert')):
                break
+           system("cls")
     print("[+] Stopping...")
     
     
@@ -35,6 +38,7 @@ while True:
         while True:
             system("cls")
             sleep(1)
+            print("Clicker: OFF\n")
             print("[!] Press Insert to start clicking!\n[!] Press 'Q' to quit to menu")
             k = keyboard.read_key(suppress=False)
             if (k == 'q'):
@@ -51,5 +55,3 @@ while True:
         speed = setspeed(speed)
     else:
         print("[-] Wrong input!")
-                
-        
